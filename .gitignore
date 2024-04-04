@@ -4,6 +4,7 @@
 .idea/
 .editorconfig
 vendor/
+web/app/languages/*
 web/app/plugins/*
 web/app/mu-plugins/*
 web/app/themes/*
