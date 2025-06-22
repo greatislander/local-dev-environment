@@ -16,7 +16,7 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-docker-action@v4
       with:
-        version: 27.5.99
+        version: 27.5.1
     - name: Setup Lando
       uses: lando/setup-lando@v3
     - name: Add pressbooks.test to hosts file
