@@ -13,6 +13,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Set up Docker
+      uses: docker/setup-docker-action@v4
+      with:
+        version: 27.5.99
     - name: Setup Lando
       uses: lando/setup-lando@v3
     - name: Add pressbooks.test to hosts file
@@ -24,6 +28,7 @@ jobs:
         echo 'ARCHITECTURE=arm64' >> config_services/.env
     - name: Start Lando
       run: |
+        lando update
         lando start
     - name: Import database
       run: |
